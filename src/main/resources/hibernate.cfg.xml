@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+        <hibernate-configuration>
+    <session-factory>
+
+        <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+    <property name="hibernate.connection.url">jdbc:oracle:thin:@sl22-database1.cshzc28zzyct.us-east-2.rds.amazonaws.com:1521:ORCL </property>
+        <property name="hibernate.connection.username">main</property>
+        <property name="hibernate.connection.password">db123slash22 </property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!--property name="show_sql">true</property>-->
+        <property name="hibernate.show_sql">true</property>
+
+
+        <property name="hibernate.enable_lazy_load_no_trans">true</property>
+
+
+         <!--<<Подключаем маппинг классов>>-->
+        <mapping class="Item"/>
+
+</session-factory>
+
+    <!--<open_tag params>value</open_tag>-->
+
+</hibernate-configuration>
+
+
+
+
